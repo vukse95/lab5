@@ -51,3 +51,18 @@ void draw_square(Xuint32 BaseAddress){
 			}
 		}
 }
+
+void draw_square_x_y(Xuint32 BaseAddress, int x, int y){
+	int i, j, k;
+		for (j = 0; j < 480; j++){
+			for (k = 0; k<(640/32); k++){
+				i = j*(640/32) + k;
+				if ((j > x) && (j < x + 80) && (k > y) && (k < y + 4)) {
+					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+				}
+				else{
+					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+				}
+			}
+		}
+}
