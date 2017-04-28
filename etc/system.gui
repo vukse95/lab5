@@ -14,6 +14,7 @@
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="129,941,250" VERSION="0"/>
+    <SET ID="vga_periph_mem_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS/>
     </STATUS>
@@ -30,7 +31,7 @@
       <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
       <VARIABLE ID="RS232" ROW_INDEX="8"/>
       <VARIABLE ID="my_peripheral_0" ROW_INDEX="9"/>
-      <VARIABLE ID="vga_periph_mem_0" ROW_INDEX="10"/>
+      <VARIABLE ID="vga_periph_mem_0" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
     </SEQUENCES>
   </SET>
 

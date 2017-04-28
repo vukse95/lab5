@@ -253,7 +253,8 @@ architecture IMP of user_logic is
       sync_o              : out std_logic;
       red_o               : out std_logic_vector(7 downto 0);
       green_o             : out std_logic_vector(7 downto 0);
-      blue_o              : out std_logic_vector(7 downto 0)
+      blue_o              : out std_logic_vector(7 downto 0);
+		irq_o					  : out std_logic
     );
   end component;
   
@@ -321,6 +322,11 @@ architecture IMP of user_logic is
   signal unit_sel            : std_logic_vector(1 downto 0);
   signal unit_addr           : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0);--15+6+1
   signal reg_we              : std_logic;
+  
+  signal timer_cnt : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+  signal v_sync_counter_tc : std_logic_vector(31 downto 0);
+  signal tc : std_logic;
+  signal en : std_logic;
 
 begin
   --USER logic implementation added here
@@ -359,11 +365,41 @@ begin
             when REG_ADDR_04 => foreground_color <= Bus2IP_Data(23 downto 0);
             when REG_ADDR_05 => background_color <= Bus2IP_Data(23 downto 0);
             when REG_ADDR_06 => frame_color      <= Bus2IP_Data(23 downto 0);
+				when REG_ADDR_07 => v_sync_counter_tc <= Bus2IP_Data(23 downto 0);
             when others => null;
           end case;
         end if;
     end if;
   end process;
+  
+  -- timer counter 
+  process (Bus2IP_Clk, Bus2IP_Resetn) 
+  begin
+	if Bus2IP_Resetn = '0' then 
+		timer_cnt <= (others => '0');
+	elsif rising_edge(Bus2IP_Clk) then
+		if (en = '1') then
+			if (tc = '1') then 
+				timer_cnt <= (others => '0'); 
+			else 
+				timer_cnt <= timer_cnt + 1;
+			end if; 
+		end if; 
+	end if; 
+	end process;
+	en <= slv_reg1(1); 
+	tc <= '1' when (timer_cnt >= (slv_reg0 - 1)) else '0';
+	
+	process( Bus2IP_Clk ) is
+	begin
+		if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
+			if Bus2IP_Resetn = '0' then
+				irq_o <= '0';
+			else 
+				irq_o <= tc;
+			end if;
+		end if;
+	end process;
     
 --  direct_mode      <= '0';
 --  display_mode     <= "01";
