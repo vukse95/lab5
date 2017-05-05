@@ -9,17 +9,20 @@
       <VARIABLE COL_INDEX="1" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Bus Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" IS_VISIBLE="FALSE" VIEWDISP="Bus Standard" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="IP Type" VIEWTYPE="HEADER"/>
-      <VARIABLE COL_INDEX="4" COL_WIDTH="688" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="4" COL_WIDTH="942" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="5" IS_VISIBLE="FALSE" VIEWDISP="IP Classification" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="129,941,250" VERSION="0"/>
     <SET ID="vga_periph_mem_0" IS_EXPANDED="TRUE"/>
+    <SET ID="vga_periph_mem_1" IS_EXPANDED="TRUE"/>
     <STATUS>
-      <SELECTIONS/>
+      <SELECTIONS>
+        <VARIABLE ID="vga_periph_mem_1"/>
+      </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="12"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="13"/>
       <VARIABLE ID="microblaze_0_ilmb" ROW_INDEX="2"/>
       <VARIABLE ID="microblaze_0_i_bram_ctrl" ROW_INDEX="6"/>
       <VARIABLE ID="microblaze_0_dlmb" ROW_INDEX="1"/>
@@ -27,11 +30,12 @@
       <VARIABLE ID="microblaze_0_bram_block" ROW_INDEX="4"/>
       <VARIABLE ID="microblaze_0" ROW_INDEX="3"/>
       <VARIABLE ID="debug_module" ROW_INDEX="7"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="11"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="12"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
       <VARIABLE ID="RS232" ROW_INDEX="8"/>
       <VARIABLE ID="my_peripheral_0" ROW_INDEX="9"/>
       <VARIABLE ID="vga_periph_mem_0" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
+      <VARIABLE ID="vga_periph_mem_1" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
     </SEQUENCES>
   </SET>
 
@@ -90,15 +94,18 @@
       <VARIABLE COL_INDEX="9" COL_WIDTH="142" IS_VISIBLE="TRUE" VIEWDISP="IP Type" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="10" IS_VISIBLE="FALSE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="11" IS_VISIBLE="TRUE" VIEWDISP="IP Classification" VIEWTYPE="HEADER"/>
-      <VARIABLE COL_INDEX="11" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="11" COL_WIDTH="417" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,630,200" VERSION="0"/>
+    <SET ID="vga_periph_mem_1" IS_EXPANDED="TRUE"/>
     <STATUS>
-      <SELECTIONS/>
+      <SELECTIONS>
+        <VARIABLE ID="S_AXI" PARENT="vga_periph_mem_1"/>
+      </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="13"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="14"/>
       <VARIABLE ID="microblaze_0_ilmb" ROW_INDEX="3"/>
       <VARIABLE ID="microblaze_0_i_bram_ctrl" ROW_INDEX="7"/>
       <VARIABLE ID="microblaze_0_dlmb" ROW_INDEX="2"/>
@@ -106,11 +113,12 @@
       <VARIABLE ID="microblaze_0_bram_block" ROW_INDEX="5"/>
       <VARIABLE ID="microblaze_0" ROW_INDEX="4"/>
       <VARIABLE ID="debug_module" ROW_INDEX="8"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="12"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="13"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="1"/>
       <VARIABLE ID="RS232" ROW_INDEX="9"/>
       <VARIABLE ID="my_peripheral_0" ROW_INDEX="10"/>
       <VARIABLE ID="vga_periph_mem_0" ROW_INDEX="11"/>
+      <VARIABLE ID="vga_periph_mem_1" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
     </SEQUENCES>
   </SET>
 

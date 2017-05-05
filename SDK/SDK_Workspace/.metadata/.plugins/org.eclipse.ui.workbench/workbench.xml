@@ -45,7 +45,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/student.DOMAIN/Desktop/RA210_2014/LPRS/Zad2/lab5/SDK/SDK_Workspace/hello_world/src/helloworld.c" title="helloworld.c" tooltip="hello_world/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2880" selectionTopPixel="381"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2838" selectionTopPixel="381"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="vga_periph_mem.h" partName="vga_periph_mem.h" path="C:/Users/student.DOMAIN/Desktop/RA210_2014/LPRS/Zad2/lab5/SDK/SDK_Workspace/hello_world/src/vga_periph_mem.h" title="vga_periph_mem.h" tooltip="hello_world/src/vga_periph_mem.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/vga_periph_mem.h"/>

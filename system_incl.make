@@ -61,6 +61,7 @@ SIMGEN_OPTIONS = -p $(DEVICE) -lang $(XPS_HDL_LANG) -intstyle $(INTSTYLE) $(SEAR
 
 
 CORE_STATE_DEVELOPMENT_FILES = pcores/vga_periph_mem_v1_00_a/netlist/char_rom_def.ngc \
+pcores/vga_periph_mem_v1_00_a/netlist/char_rom_def.ngc \
 C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd \
 C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd \
 C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd \
@@ -155,7 +156,9 @@ implementation/system_clock_generator_0_wrapper.ngc \
 implementation/system_axi4lite_0_wrapper.ngc \
 implementation/system_rs232_wrapper.ngc \
 implementation/system_my_peripheral_0_wrapper.ngc \
-implementation/system_vga_periph_mem_0_wrapper.ngc
+implementation/system_vga_periph_mem_0_wrapper.ngc \
+implementation/system_vga_periph_mem_1_wrapper.ngc \
+implementation/system_axi_intc_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 
